@@ -46,3 +46,25 @@ Go is characterized by several key features that set it apart from other program
 
 Following the tutorial: [Golang Tutorial for Beginners | Full Go Course By Techworld with Nana](https://youtu.be/yyUHQIec83I?si=SFjogensYDg9SnPV)
 
+1. [Download Go From official Go Website](https://go.dev/dl/)
+
+2. After installation, verify the installation by running:
+```bash
+go version # This command will display the installed Go version.
+```
+
+3. Initialize a new Go application by running the following command in your terminal:
+```bash
+mkdir booking-app
+cd booking-app
+touch main.go
+
+go mod init booking-app  # This command initializes a new Go module named booking-app.
+```
+
+4. Once initialized, you'll see the main.go file created under the booking-app directory. In Go, everything is organized into packages, and main.go serves as the entry point for our application. It should contain only one main function. The fmt package is one of Go's core packages used for formatting input and output.
+
+5. Execute the code in main.go by running:
+```bash
+go run main.go
+```
