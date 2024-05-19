@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var conferenceName = "Go Conference"
@@ -10,6 +12,8 @@ func main() {
 	fmt.Println("Welcome to", conferenceName, "booking application")
 	fmt.Println("We have total of", conferenceTickets, "tickets and", remainingTickets, "are still available")
 	fmt.Println("Get your tickets here to attend")
+
+	var bookings = [50]string{} //syntaxt: [size]dataType{Value}
 
 	var firstName string
 	var lastName string
@@ -31,6 +35,11 @@ func main() {
 	fmt.Scan(&userTickets)
 
 	remainingTickets = remainingTickets - userTickets
+	bookings[0] = firstName + " " + lastName
+
+	fmt.Printf("The whole array: %v\n", bookings)
+	fmt.Printf("This first value: %v\n", bookings[0])
+	fmt.Printf("Array length: %v\n", len(bookings))
 
 	fmt.Printf("Thank you %v %v for booking %v ticktets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
